@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/WelcomeElement"
+  },
+  "definitions": {
+    "WelcomeElement": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "product_id": {
+          "type": "integer"
+        },
+        "quantity": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "product_id",
+        "quantity"
+      ],
+      "title": "WelcomeElement"
+    }
+  }
+}
