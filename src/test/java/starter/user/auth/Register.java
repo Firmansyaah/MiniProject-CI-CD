@@ -28,7 +28,7 @@ public class Register {
     @Step("I send a POST request to register a new user with valid data")
     public void sendRegisterRequestWithValidData() {
         JSONObject requestBody = new JSONObject();
-        requestBody.put("email", "kiwwik1234@mail.com");
+        requestBody.put("email", "kiwwik12345@mail.com");
         requestBody.put("password", "123123");
         requestBody.put("fullname", "Fireman");
 
@@ -50,7 +50,7 @@ public class Register {
 
         restAssuredThat(response -> response.body("data.ID", Matchers.notNullValue()));
         restAssuredThat(response -> response.body("data.Fullname", equalTo("Fireman")));
-        restAssuredThat(response -> response.body("data.Email", equalTo("kiwwik1234@mail.com"))); //setiap tes diupdate
+        restAssuredThat(response -> response.body("data.Email", equalTo("kiwwik12345@mail.com"))); //setiap tes diupdate
         restAssuredThat(response -> response.body("data.Password", equalTo("123123")));
 
         restAssuredThat(response -> response.body(matchesJsonSchema(schema)));
